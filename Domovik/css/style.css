@@ -11,6 +11,14 @@
 @font-face {
   font-family: "Commissioner";
   font-display: swap;
+  src: url("../fonts/Commissioner-Medium.woff2") format("woff2"), url("../fonts/Commissioner-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  font-display: swap;
   src: url("../fonts/Commissioner-Light.woff2") format("woff2"), url("../fonts/Commissioner-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -25,14 +33,6 @@
 }
 
 @font-face {
-  font-family: "Commissioner";
-  font-display: swap;
-  src: url("../fonts/Commissioner-Medium.woff2") format("woff2"), url("../fonts/Commissioner-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -43,8 +43,8 @@
 @font-face {
   font-family: "Onest";
   font-display: swap;
-  src: url("../fonts/Onest-Light.woff2") format("woff2"), url("../fonts/Onest-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Onest-Bold.woff2") format("woff2"), url("../fonts/Onest-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -59,8 +59,16 @@
 @font-face {
   font-family: "Onest";
   font-display: swap;
-  src: url("../fonts/Onest-Bold.woff2") format("woff2"), url("../fonts/Onest-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Onest-Medium.woff2") format("woff2"), url("../fonts/Onest-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  font-display: swap;
+  src: url("../fonts/Onest-Light.woff2") format("woff2"), url("../fonts/Onest-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -69,14 +77,6 @@
   font-display: swap;
   src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Onest";
-  font-display: swap;
-  src: url("../fonts/Onest-Medium.woff2") format("woff2"), url("../fonts/Onest-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -3189,6 +3189,12 @@ body.lock {
     padding-left: 32px;
   }
 
+  .header__product::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .header__menu {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -3219,12 +3225,6 @@ body.lock {
 @media (max-width: 991.98px) {
   body.lock-menu {
     overflow: hidden;
-  }
-
-  .header__product::before {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .projects__slider {

@@ -100,15 +100,6 @@ $(function () {
 
 
 
-
-    // fancybox settings
-
-    $('[data-fancybox]').fancybox({
-        touch: false,
-    });
-
-
-
     // ideas block logic
 
     $(".ideas__item-btn.active").siblings(".ideas__item-desc").slideDown(0);
@@ -316,74 +307,9 @@ $(function () {
 
     var phoneInputs = $('input[type="tel"]');
 
-    function getInputNumbersValue(input) {
-        return input.val().replace(/\D/g, '');
+    if (phoneInputs.length > 0) {
+        $("input[type='tel']").inputmask("+7 (999) 999-9999");
     }
-
-    function onPhonePaste(e) {
-        var input = $(this);
-        var inputNumbersValue = getInputNumbersValue(input);
-        var pasted = e.originalEvent.clipboardData || window.clipboardData;
-        if (pasted) {
-            var pastedText = pasted.getData('Text');
-            if (/\D/g.test(pastedText)) {
-                input.val(inputNumbersValue);
-                return;
-            }
-        }
-    }
-
-    function onPhoneInput(e) {
-        var input = $(this);
-        var inputNumbersValue = getInputNumbersValue(input);
-        var selectionStart = this.selectionStart;
-        var formattedInputValue = "";
-
-        if (!inputNumbersValue) {
-            input.val("");
-            return;
-        }
-
-        if (input.val().length !== selectionStart) {
-            if (e.originalEvent.data && /\D/g.test(e.originalEvent.data)) {
-                input.val(inputNumbersValue);
-            }
-            return;
-        }
-
-        if (["7", "8", "9"].includes(inputNumbersValue[0])) {
-            if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
-            var firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
-            formattedInputValue = firstSymbols + " ";
-            if (inputNumbersValue.length > 1) {
-                formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
-            }
-            if (inputNumbersValue.length >= 5) {
-                formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
-            }
-            if (inputNumbersValue.length >= 8) {
-                formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
-            }
-            if (inputNumbersValue.length >= 10) {
-                formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
-            }
-        } else {
-            formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
-        }
-        input.val(formattedInputValue);
-    }
-
-    function onPhoneKeyDown(e) {
-        var input = $(this);
-        var inputValue = input.val().replace(/\D/g, '');
-        if (e.keyCode === 8 && inputValue.length === 1) {
-            input.val("");
-        }
-    }
-
-    phoneInputs.on('keydown', onPhoneKeyDown);
-    phoneInputs.on('input', onPhoneInput);
-    phoneInputs.on('paste', onPhonePaste);
 
 
 
