@@ -54,7 +54,7 @@ body {
 	min-width: 320px;
 	line-height: normal;
 
-	background: url("@img/bg.png") 0 0 / cover no-repeat, #ebe9e3;
+	background: url("@img/bg.png") 0 0 / cover repeat-y, #ebe9e3;
 	&.lock {
 		overflow: hidden;
 	}
