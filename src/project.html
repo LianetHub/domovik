@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Домовик | Страница проекта'
+    })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "className": ""
+            })
+            <main class="page">
+                <section class="project-card">
+                    <div class="container">
+                        <nav class="navigation">
+                            <ul class="navigation__list d-flex align-items-center flex-wrap">
+                                <li class="navigation__list-item">
+                                    <a href="/" class="navigation__list-link icon-home"></a>
+                                </li>
+                                <li class="navigation__list-item">
+                                    <a href="" class="navigation__list-link">Каркасные дом </a>
+                                </li>
+                                <li class="navigation__list-item">
+                                    <span class="navigation__list-link active"> ДК001</>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="project-card__title title text-center">КАРКАСНЫЙ ДОМ ДК001</h1>
+                        <div class="project-card__body">
+                            <div class="project-card__header d-flex flex-lg-nowrap flex-wrap">
+                                <ul class="project-card__props d-flex flex-sm-column flex-row">
+                                    <li class="project-card__props-item d-flex flex-column align-items-start font-weight-medium">
+                                        <div class="project-card__props-icon">
+                                            <img src="@img/icons/size.svg" alt="Иконка">
+                                        </div>
+                                        <div class="project-card__props-name">Размер:</div>
+                                        <div class="project-card__props-value title-sm">9х12</div>
+                                    </li>
+                                    <li class="project-card__props-item d-flex flex-column align-items-start font-weight-medium">
+                                        <div class="project-card__props-icon">
+                                            <img src="@img/icons/ruler.svg" alt="Иконка">
+                                        </div>
+                                        <div class="project-card__props-name">Площадь:</div>
+                                        <div class="project-card__props-value title-sm"> 113 м²</div>
+                                    </li>
+                                    <li class="project-card__props-item d-flex flex-column align-items-start font-weight-medium">
+                                        <div class="project-card__props-icon">
+                                            <img src="@img/icons/stairs.svg" alt="Иконка">
+                                        </div>
+                                        <div class="project-card__props-name">Этажность:</div>
+                                        <div class="project-card__props-value title-sm ">Одноэтажный</div>
+                                    </li>
+                                </ul>
+                                <div class="project-card__image order-lg-0 order-first">
+                                    <img src="@img/projects/07.png" alt="Фото проекта">
+                                </div>
+                                <div class="project-card__info">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="project-card__info-item">Спальни: 2</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="project-card__info-item">Санузел: 1</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="project-card__info-item">Этажей: 1</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="project-card__info-item">Тераса: есть</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="project-card__info-item">Крыша: мансардная</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card__total d-flex justify-content-between flex-xl-nowrap flex-wrap">
+                                <div class="project-card__total-block d-flex flex-column">
+                                    <div class="project-card__total-name">Контур:</div>
+                                    <div class="project-card__total-price">2 174 900 ₽</div>
+                                </div>
+                                <div class="project-card__total-block d-flex flex-column">
+                                    <div class="project-card__total-name">Теплый контур:</div>
+                                    <div class="project-card__total-price">3 024 900 ₽</div>
+                                </div>
+                                <div class="project-card__total-block d-flex flex-column">
+                                    <div class="project-card__total-name">Комфорт:</div>
+                                    <div class="project-card__total-price">4 214 900 ₽</div>
+                                </div>
+                                <div class="project-card__total-block d-flex flex-column">
+                                    <div class="project-card__total-name">Премиум:</div>
+                                    <div class="project-card__total-price">4 524 900 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="plans">
+                    <div class="container">
+                        <div class="plans__slider">
+                            <div class="plans__slide">
+                                <a href="@img/plans/01.png" data-fancybox="plans" class="plans__image">
+                                    <img src="@img/plans/01.png" alt="Фото плана">
+                                </a>
+                            </div>
+                            <div class="plans__slide">
+                                <a href="@img/plans/02.png" data-fancybox="plans" class="plans__image">
+                                    <img src="@img/plans/02.png" alt="Фото плана">
+                                </a>
+                            </div>
+                            <div class="plans__slide">
+                                <a href="@img/plans/01.png" data-fancybox="plans" class="plans__image">
+                                    <img src="@img/plans/01.png" alt="Фото плана">
+                                </a>
+                            </div>
+                            <div class="plans__slide">
+                                <a href="@img/plans/02.png" data-fancybox="plans" class="plans__image">
+                                    <img src="@img/plans/02.png" alt="Фото плана">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="configuration">
+                    <div class="container">
+                        <h2 class="configuration__title title text-center">Описание комплектации</h2>
+                        <div class="configuration__body rounded-lg bg-white">
+                            <div class="configuration__table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>
+                                                Контур
+                                                <strong>2 174 900 ₽</strong>
+                                            </th>
+                                            <th>
+                                                Теплый контур
+                                                <strong> 3 024 900 ₽</strong>
+                                            </th>
+                                            <th>
+                                                Комфорт
+                                                <strong>4 214 900 ₽</strong>
+                                            </th>
+                                            <th>
+                                                Премиум
+                                                <strong>4 524 900 ₽</strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>Сухой строганный антисептированный материал</td>
+                                        <td><span class="icon-plus"></span></td>
+                                        <td><span class="icon-plus"></span></td>
+                                        <td><span class="icon-plus"></span></td>
+                                        <td><span class="icon-plus"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Обвязка</td>
+                                        <td>150×150 мм</td>
+                                        <td>150×150 мм</td>
+                                        <td>150×150 мм</td>
+                                        <td>150×150 мм</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лаги</td>
+                                        <td>50×200 мм</td>
+                                        <td>50×200 мм</td>
+                                        <td>50×200 мм</td>
+                                        <td>50×200 мм</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Каркас</td>
+                                        <td>50×150 мм</td>
+                                        <td>50×150 мм</td>
+                                        <td>50×150 мм</td>
+                                        <td>50×150 мм</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Стропильная система</td>
+                                        <td>Металлочерепица</td>
+                                        <td>Металлочерепица</td>
+                                        <td>Металлочерепица</td>
+                                        <td>Металлочерепица</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Снегозадержатели</td>
+                                        <td>нет</td>
+                                        <td>нет</td>
+                                        <td>нет</td>
+                                        <td><span class="icon-plus"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <a href="" class="configuration__btn btn btn-primary-outline ml-auto mr-auto icon-arrow-right">СМОТРЕТЬ КОМПЛЕКТАЦИЮ ПОЛНОСТЬЮ</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="extras">
+                    <div class="container">
+                        <h2 class="extras__title title text-center">Дополнительные опции</h2>
+                        <div class="extras__body">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Свайно-винтовой
+                                            108х2500х4 мм
+                                            (1 свая под ключ)
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            ЖБ свая
+                                            150х150х3000 мм
+                                            (1 свая под ключ)
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Сетка
+                                            от грызунов
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Замена кровли
+                                            из ондулина
+                                            на металлочерепицу
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Дополнительный венец
+                                            из профилированного бруса
+                                            140х140 мм
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Дополнительный венец
+                                            из профилированного бруса 190х140 мм
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Водосточная
+                                            система
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Снегозадержатели
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="extras__block rounded-lg bg-white d-flex align-items-center">
+                                        <label class="extras__checkbox">
+                                            <input type="checkbox" class="extras__checkbox-input hidden" hidden>
+                                            <span class="extras__checkbox-btn icon-plus"></span>
+                                        </label>
+                                        <div class="extras__name title-sm font-weight-medium">
+                                            Заводская
+                                            покраска
+                                            с улицы
+                                        </div>
+                                        <div class="extras__price">уточняйте</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="extras__total d-flex justify-content-between flex-xl-nowrap flex-wrap">
+                            <div class="extras__total-block d-flex flex-column">
+                                <div class="extras__total-name">Контур:</div>
+                                <div class="extras__total-price">2 174 900 ₽</div>
+                            </div>
+                            <div class="extras__total-block d-flex flex-column">
+                                <div class="extras__total-name">Теплый контур:</div>
+                                <div class="extras__total-price">3 024 900 ₽</div>
+                            </div>
+                            <div class="extras__total-block d-flex flex-column">
+                                <div class="extras__total-name">Комфорт:</div>
+                                <div class="extras__total-price">4 214 900 ₽</div>
+                            </div>
+                            <div class="extras__total-block d-flex flex-column">
+                                <div class="extras__total-name">Премиум:</div>
+                                <div class="extras__total-price">4 524 900 ₽</div>
+                            </div>
+                            <div class="extras__total-block d-flex flex-column">
+                                <div class="extras__total-name">Дополнительные опции:</div>
+                                <div class="extras__total-price color-yellow">0 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="projects">
+                    <div class="container">
+                        <h2 class="projects__title title text-center">похожие проекты</h2>
+                        <div class="projects__slider">
+                            @@loop('./html/templates/_project.html', './html/json/projects.json')
+                            @@loop('./html/templates/_project.html', './html/json/projects-2.json')
+                        </div>
+                    </div>
+                </section>
+
+                @@include('./html/_videos.html')
+                <section class="feedback">
+                    <div class="container">
+                        @@include('html/_form.html')
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_popup.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

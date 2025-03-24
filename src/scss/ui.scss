@@ -1,0 +1,283 @@
+@import "modules/config";
+
+.title {
+	color: #715235;
+	font-weight: 700;
+	line-height: 115%;
+	letter-spacing: -1.92px;
+	text-transform: uppercase;
+	font-size: 28px;
+	@media (min-width: $md3) {
+		font-size: 38px;
+	}
+	@media (min-width: $md1) {
+		font-size: 46px;
+	}
+	@media (min-width: $md0) {
+		font-size: 52px;
+	}
+	@media (min-width: $md-xxl) {
+		font-size: 64px;
+	}
+}
+
+.title-md {
+	font-weight: 700;
+	line-height: 110%;
+	letter-spacing: -1.08px;
+	font-size: 18px;
+	@media (min-width: $md4) {
+		font-size: 22px;
+	}
+	@media (min-width: $md3) {
+		font-size: 24px;
+	}
+	@media (min-width: $md1) {
+		font-size: 28px;
+	}
+	@media (min-width: $md0) {
+		font-size: 32px;
+	}
+	@media (min-width: $md-xxl) {
+		font-size: 36px;
+	}
+}
+
+.title-sm {
+	line-height: 110%;
+	letter-spacing: -0.72px;
+	font-size: 20px;
+	@media (min-width: $md1) {
+		font-size: 22px;
+	}
+	@media (min-width: $md0) {
+		font-size: 24px;
+	}
+}
+
+.caption {
+	font-weight: 300;
+	line-height: 110%;
+	letter-spacing: -0.63px;
+	text-transform: uppercase;
+	font-size: 18px;
+	@media (min-width: $md0) {
+		font-size: 21px;
+	}
+}
+
+.section-header {
+	// .section-header__caption
+	&__caption {
+		max-width: 360px;
+		@media (min-width: $md3) {
+			padding-bottom: 20px;
+		}
+	}
+	// .section-header__title
+	&__title {
+		transition: all 0.6s ease;
+		text-indent: 40px;
+		@media (min-width: $md3) {
+			max-width: 980px;
+			text-indent: 155px;
+		}
+		&.active {
+			text-indent: 0;
+		}
+	}
+}
+
+.color-accent {
+	color: #715235;
+}
+
+.color-yellow {
+	color: #c68a23;
+}
+
+.font-weight-semibold {
+	font-weight: 600;
+}
+
+.font-weight-medium {
+	font-weight: 500;
+}
+
+.rounded-lg {
+	border-radius: 30px !important;
+	@media (min-width: $md0) {
+		border-radius: 50px !important;
+	}
+}
+
+.rounded-sm {
+	border-radius: 20px !important;
+}
+
+.bg-light {
+	background: $light !important;
+}
+
+.navigation {
+	padding: 20px 0;
+	// .navigation__list
+	&__list {
+	}
+	// .navigation__list-item
+	&__list-item {
+		display: flex;
+		align-items: center;
+		color: #715235;
+		font-size: 13px;
+		line-height: 32px;
+		letter-spacing: -0.39px;
+		gap: 4px;
+		&:not(:first-child) {
+			&::before {
+				content: "—";
+			}
+		}
+	}
+	// .navigation__list-link
+	&__list-link {
+		transition: color 0.3s ease;
+		&::before {
+			font-size: 24px;
+		}
+	}
+}
+
+.slick-arrow {
+	position: static;
+	vertical-align: middle;
+	font-size: 0;
+	background: #c58d30;
+	color: #fff;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+	z-index: 2;
+	width: 35px;
+	height: 35px;
+	border-radius: 4px;
+	font-size: 0;
+	&::before {
+		font-size: 18px;
+		@media (min-width: $md3) {
+			font-size: 24px;
+		}
+	}
+	@media (min-width: $md3) {
+		border-radius: 12px;
+		height: 62px;
+		width: 62px;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: $accent;
+			border-color: $accent;
+			color: #fff;
+		}
+	}
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	&.slick-disabled {
+		opacity: 0.6;
+		pointer-events: none;
+		// visibility: hidden;
+	}
+	&.slick-next {
+		right: 0;
+		&::before {
+			@extend %ic, .icon-arrow-right;
+		}
+	}
+
+	&.slick-prev {
+		left: 0;
+		&::before {
+			@extend %ic, .icon-arrow-left;
+		}
+	}
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+
+//============ МОДУЛИ ====================
+@import "modules/popup";
+// @import "modules/navigation";
+// @import "modules/select";
+// @import "modules/stepper";
+//============ МОДУЛИ ====================
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $mainColor;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+// $scrollbarColor: $orange;
+// $scrollbarHover: darken(
+// 	$color: $orange,
+// 	$amount: 10,
+// );
+
+// ::-webkit-scrollbar {
+// 	width: 8px;
+// }
+// ::-webkit-scrollbar-track {
+// 	background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $scrollbarColor;
+// 	border-radius: 8px;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			background: $scrollbarHover;
+// 		}
+// 	}
+// }
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============

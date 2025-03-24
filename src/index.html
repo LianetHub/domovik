@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Домовик | Главная'
+    })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "className": " header_home"
+            })
+            <main class="page">
+                <section class="promo d-flex justify-content-center align-items-center overflow-hidden">
+                    <div class="container">
+                        <h1 class="promo__title text-center text-uppercase font-weight-light ml-auto mr-auto">
+                            Дома, которые
+                            <strong class="color-yellow font-weight-bold"><span class="text-nowrap">с<img src="@img/icons/emoji-fire.png" width="64" height="77" alt="emoji">гревают</span> сердце и душу</strong> - от проекта
+                            до счастливого
+                            новоселья
+                        </h1>
+                        <video class="promo__video" muted loop playsinline autoplay="true" preload="metadata" poster="@img/poster.jpg">
+                            <source src="./files/banner.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                        </video>
+                    </div>
+                </section>
+                <section class="projects">
+                    <div class="container">
+                        <div class="section-header row align-items-end">
+                            <div class="col-lg-4 offset-xxl-1">
+                                <div class="section-header__caption caption">Первые среди лучших!</div>
+                            </div>
+                            <div class="col-lg-7">
+                                <h2 class="section-header__title title" data-animate>
+                                    Подборка
+                                    популярных проектов
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="projects__body rounded-lg">
+                            <div class="projects__block">
+                                <div class="projects__header">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-5 col-lg-4 col-4">
+                                            <div class="projects__quantity">60 домов</div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-8">
+                                            <h2 class="projects__title title-md text-uppercase">каркасные дома</h2>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4">
+                                            <a href="" class="projects__btn btn btn-primary icon-arrow-right ml-lg-auto">Смотреть все</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="projects__slider">
+                                    @@loop('./html/templates/_project.html', './html/json/projects.json')
+                                </div>
+                            </div>
+                            <div class="projects__block">
+                                <div class="projects__header">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-5 col-lg-4 col-4">
+                                            <div class="projects__quantity">33 дома</div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-8">
+                                            <h2 class="projects__title title-md text-uppercase">садовые дома</h2>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4">
+                                            <a href="" class="projects__btn btn btn-primary icon-arrow-right ml-lg-auto">Смотреть все</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="projects__slider">
+                                    @@loop('./html/templates/_project.html', './html/json/projects-2.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="benefits">
+                    <div class="container">
+                        <div class="section-header row align-items-end">
+                            <div class="col-lg-4 offset-xxl-1">
+                                <div class="section-header__caption caption">фотоотчеты, которые вдохновляют и рассказывают, как рождаются дома мечты!</div>
+                            </div>
+                            <div class="col-lg-7">
+                                <h2 class="section-header__title title" data-animate>
+                                    Загляните за кулисы
+                                    строительства:
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="benefits__slider">
+                            <div class="benefits__slide">
+                                <div class="benefits__image h-100">
+                                    <img src="@img/benefits/01.png" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__card d-flex flex-column rounded-sm h-100">
+                                    <div class="benefits__card-title font-weight-medium title-sm">Дом из бруса <br> 8х8 с мансардой</div>
+                                    <div class="benefits__card-icon">
+                                        <img src="@img/icons/map.svg" alt="Иконка">
+                                    </div>
+                                    <address class="benefits__card-address font-weight-medium">
+                                        Московская область, <br>
+                                        Наро-фоминский район, <br>
+                                        ул. Луговая, д.114 <br>
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__image rounded-sm h-100">
+                                    <img src="@img/benefits/02.jpg" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__image rounded-sm h-100">
+                                    <img src="@img/benefits/03.jpg" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__image h-100">
+                                    <img src="@img/benefits/01.png" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__card d-flex flex-column rounded-sm h-100">
+                                    <div class="benefits__card-title font-weight-medium title-sm">Дом из бруса <br> 8х8 с мансардой</div>
+                                    <div class="benefits__card-icon">
+                                        <img src="@img/icons/map.svg" alt="Иконка">
+                                    </div>
+                                    <address class="benefits__card-address font-weight-medium">
+                                        Московская область, <br>
+                                        Наро-фоминский район, <br>
+                                        ул. Луговая, д.114 <br>
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__image rounded-sm h-100">
+                                    <img src="@img/benefits/02.jpg" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                            <div class="benefits__slide">
+                                <div class="benefits__image rounded-sm h-100">
+                                    <img src="@img/benefits/03.jpg" class="cover-image rounded-sm" alt="Фото работы">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="benefits__more btn btn-primary icon-arrow-right">ВСЕ ОТЧЕТЫ</a>
+                    </div>
+                </section>
+                <div class="banner">
+                    <div class="container">
+                        <div class="banner__body d-flex flex-md-row flex-lg-nowrap flex-md-wrap flex-column bg-white rounded-lg">
+                            <div class="banner__side d-flex flex-column">
+                                <div class="banner__caption title-sm">
+                                    <p>
+                                        <strong class="font-weight-semibold">В 2014 году наша компания официально представлена на рынке.</strong> <br>
+                                        За это время нам удалось собрать команду из ответственных качественных людей.
+                                    </p>
+                                    <p>
+                                        Каждый из наших сотрудников
+                                        ответственно подходит к&nbsp;выполнению своей задачи и&nbsp;является частью строительной компании
+                                        <img src="@img/logo.svg" alt="Логотип">
+                                    </p>
+                                </div>
+                                <p class="banner__hint font-weight-light">
+                                    Обращаясь к нам вы получаете преимущество! <strong class="font-weight-semibold">Мы построим вам именно то что вам нужно.</strong>
+                                </p>
+                                <ul class="banner__list d-flex justify-content-between">
+                                    <li class="banner__item d-flex flex-column">
+                                        <div class="banner__item-num title-md" data-animate="number">11</div>
+                                        <div class="banner__item-desc font-weight-light">Лет строим дома для вас</div>
+                                    </li>
+                                    <li class="banner__item d-flex flex-column">
+                                        <div class="banner__item-num title-md" data-animate="number">29</div>
+                                        <div class="banner__item-desc font-weight-light">Человек в нашей команде</div>
+                                    </li>
+                                    <li class="banner__item d-flex flex-column">
+                                        <div class="banner__item-num title-md" data-animate="number">180+</div>
+                                        <div class="banner__item-desc font-weight-light">Домов построено</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="banner__image d-flex flex-column align-items-center order-xl-0 order-1">
+                                <img src="@img/banner.png" alt="Баннер">
+                                <div class="banner__info d-flex flex-column align-items-center text-center">
+                                    <div class="banner__info-icon">
+                                        <img src="@img/icons/info.svg" alt="Иконка">
+                                    </div>
+                                    <div class="banner__info-caption title-sm font-weight-bold">ТОЛЬКО <br> НАШИ <br> СТРОИТЕЛИ</div>
+                                    <p class="banner__info-desc font-weight-light">Работаем только с проверенными, славянскими бригадами</p>
+                                </div>
+                            </div>
+                            <ul class="banner__benefits d-flex flex-column">
+                                <li class="banner__benefit d-flex">
+                                    <div class="banner__benefit-icon flex-shrink-0">
+                                        <img src="@img/icons/money.svg" alt="Иконка">
+                                    </div>
+                                    <div class="banner__benefit-body d-flex flex-column">
+                                        <div class="banner__benefit-title title-md text-uppercase">Фиксированная СтОиМОСть</div>
+                                        <p class="banner__benefit-subtitle font-weight-light">Никаких скрытых платежей или неожиданностей - мы работаем честно и открыто, чтобы вы могли доверять нам на 100%</p>
+                                    </div>
+                                </li>
+                                <li class="banner__benefit d-flex">
+                                    <div class="banner__benefit-icon flex-shrink-0">
+                                        <img src="@img/icons/send-clock.svg" alt="Иконка">
+                                    </div>
+                                    <div class="banner__benefit-body d-flex flex-column">
+                                        <div class="banner__benefit-title title-md text-uppercase">Не срываем сроки строительства</div>
+                                        <p class="banner__benefit-subtitle font-weight-light">Мы ценим ваше время и строим быстро, не жертвуя качеством</p>
+                                    </div>
+                                </li>
+                                <li class="banner__benefit d-flex">
+                                    <div class="banner__benefit-icon flex-shrink-0">
+                                        <img src="@img/icons/idea.svg" alt="Иконка">
+                                    </div>
+                                    <div class="banner__benefit-body d-flex flex-column">
+                                        <div class="banner__benefit-title title-md text-uppercase">Качественные материалы</div>
+                                        <p class="banner__benefit-subtitle font-weight-light">Только проверенные MaTepanb H работаем с лучшими поставщиками, чтобы ваш дом был теплым, надежным и долговечным</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @@include('./html/_videos.html')
+                <section class="ideas">
+                    <div class="container">
+                        <div class="ideas__body bg-white rounded-lg">
+                            <h2 class="ideas__title title text-center ml-auto mr-auto">
+                                <span class="color-yellow">От идеи до воплощения:</span>
+                                как&nbsp;мы создаем дома мечты
+                            </h2>
+                            <div class="row ">
+                                <div class="col-lg-4 order-lg-0 order-1">
+                                    <ul class="ideas__list d-flex flex-column">
+                                        <li class="ideas__item">
+                                            <span role="button" class="ideas__item-btn d-flex align-items-center icon-chevron rounded-sm active">
+                                                <span class="ideas__item-icon flex-shrink-0 d-flex justify-content-center align-items-center">
+                                                    <img src="@img/ideas/01.png" alt="thumb">
+                                                </span>
+                                                <span class="ideas__item-name">Разрез перекрытия</span>
+                                            </span>
+                                            <p class="ideas__item-desc font-weight-medium">Описание разреза дома для каждого пункта может достигать 3 строк</p>
+                                        </li>
+                                        <li class="ideas__item">
+                                            <span role="button" class="ideas__item-btn d-flex align-items-center icon-chevron rounded-sm">
+                                                <span class="ideas__item-icon flex-shrink-0 d-flex justify-content-center align-items-center">
+                                                    <img src="@img/ideas/02.png" alt="thumb">
+                                                </span>
+                                                <span class="ideas__item-name">Внутреняя перегородка</span>
+                                            </span>
+                                            <p class="ideas__item-desc font-weight-medium">Описание разреза дома для каждого пункта может достигать 3 строк</p>
+                                        </li>
+                                        <li class="ideas__item">
+                                            <span role="button" class="ideas__item-btn d-flex align-items-center icon-chevron rounded-sm">
+                                                <span class="ideas__item-icon flex-shrink-0 d-flex justify-content-center align-items-center">
+                                                    <img src="@img/ideas/03.png" alt="thumb">
+                                                </span>
+                                                <span class="ideas__item-name">Разрез крыши</span>
+                                            </span>
+                                            <p class="ideas__item-desc font-weight-medium">Описание разреза дома для каждого пункта может достигать 3 строк</p>
+                                        </li>
+                                        <li class="ideas__item">
+                                            <span role="button" class="ideas__item-btn d-flex align-items-center icon-chevron rounded-sm">
+                                                <span class="ideas__item-icon flex-shrink-0 d-flex justify-content-center align-items-center">
+                                                    <img src="@img/ideas/04.png" alt="thumb">
+                                                </span>
+                                                <span class="ideas__item-name">Несущая стена</span>
+                                            </span>
+                                            <p class="ideas__item-desc font-weight-medium">Описание разреза дома для каждого пункта может достигать 3 строк</p>
+                                        </li>
+                                        <li class="ideas__item">
+                                            <span role="button" class="ideas__item-btn d-flex align-items-center icon-chevron rounded-sm">
+                                                <span class="ideas__item-icon flex-shrink-0 d-flex justify-content-center align-items-center">
+                                                    <img src="@img/ideas/05.png" alt="thumb">
+                                                </span>
+                                                <span class="ideas__item-name">Разрез пола</span>
+                                            </span>
+                                            <p class="ideas__item-desc font-weight-medium">Описание разреза дома для каждого пункта может достигать 3 строк</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xxl-7 offset-xxl-1 col-lg-8">
+                                    <div class="ideas__image position-relative">
+                                        <img src="@img/ideas/image.png" alt="Фото фасада">
+                                        <div class="ideas__points">
+                                            <span role="button" class="ideas__point position-absolute d-flex justify-content-center align-items-center rounded-circle active">1</span>
+                                            <span role="button" class="ideas__point position-absolute d-flex justify-content-center align-items-center rounded-circle">2</span>
+                                            <span role="button" class="ideas__point position-absolute d-flex justify-content-center align-items-center rounded-circle">3</span>
+                                            <span role="button" class="ideas__point position-absolute d-flex justify-content-center align-items-center rounded-circle">4</span>
+                                            <span role="button" class="ideas__point position-absolute d-flex justify-content-center align-items-center rounded-circle">5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="examples">
+                    <div class="container">
+                        <h2 class="examples__title title text-center">
+                            <span class="color-yellow d-block">Стройте будущее выгодно!</span>
+                            Специальные условия на дома вашей мечты!
+                        </h2>
+                        <div class="examples__body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="" class="examples__card d-flex flex-sm-row flex-column align-items-center icon-arrow-top-right rounded-lg bg-white">
+                                        <span class="examples__card-image flex-shrink-0">
+                                            <img src="@img/examples/01.jpg" class="cover-image" alt="Фото товара">
+                                        </span>
+                                        <span class="examples__card-desc title-md font-weight-medium">Воплотите мечту <br> о собственном <br> доме с особыми <br> условиями!</span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="" class="examples__card d-flex flex-sm-row flex-column align-items-center icon-arrow-top-right rounded-lg bg-white">
+                                        <span class="examples__card-image flex-shrink-0">
+                                            <img src="@img/examples/02.jpg" class="cover-image" alt="Фото товара">
+                                        </span>
+                                        <span class="examples__card-desc title-md font-weight-medium">Стройте выгодно <br> сегодня – наслаждайтесь комфортом <br> долгие годы!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="feedback">
+                    <div class="container">
+                        @@include('html/_form.html')
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_popup.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
