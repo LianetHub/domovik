@@ -76,14 +76,20 @@
 	}
 	// .section-header__title
 	&__title {
-		transition: all 0.6s ease;
-		text-indent: 40px;
+		& span {
+			transition: all 0.6s ease;
+			text-indent: 40px;
+		}
 		@media (min-width: $md3) {
 			max-width: 980px;
-			text-indent: 155px;
+			& span {
+				text-indent: 155px;
+			}
 		}
 		&.active {
-			text-indent: 0;
+			& span {
+				text-indent: 0;
+			}
 		}
 	}
 }

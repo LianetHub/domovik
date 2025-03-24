@@ -28,15 +28,6 @@ export const scss = () => {
                 groupCssMediaQueries()
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         webpcss({
-        //             webpClass: '.webp',
-        //             noWebpClass: '.no-webp'
-        //         })
-        //     )
-        // )
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -47,12 +38,6 @@ export const scss = () => {
                 })
             )
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         shorthand()
-        //     )
-        // )
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
@@ -67,6 +52,10 @@ export const scss = () => {
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browsersync.stream());
 }
+export const copyCssLibs = () => {
+    return app.gulp.src(app.path.src.scssLibs)
+        .pipe(app.gulp.dest(app.path.build.cssLibs));
+};
 
 export const normalize = () => {
     return app.gulp.src(app.path.src.normalize, { sourcemaps: app.isDev })

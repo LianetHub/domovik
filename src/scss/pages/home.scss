@@ -66,6 +66,16 @@
 		height: 100%;
 		object-fit: cover;
 		max-width: 100%;
+		filter: blur(50px);
+		animation: blur-out 3s ease-in-out 1s forwards;
+		@keyframes blur-out {
+			0% {
+				filter: blur(50px);
+			}
+			100% {
+				filter: blur(0px);
+			}
+		}
 	}
 }
 
@@ -173,6 +183,8 @@
 			right: 30px;
 			display: flex;
 			gap: 6px;
+			opacity: 0;
+			pointer-events: none;
 			& li {
 				position: relative;
 				flex: 1 1 auto;
@@ -193,6 +205,13 @@
 				}
 				&.slick-active {
 					background: #c58d30;
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.slick-dots {
+					opacity: 1;
 				}
 			}
 		}
@@ -252,10 +271,16 @@
 	// .benefits__slider
 	&__slider {
 		margin-top: 25px;
+		padding: 0 20px;
+		@media (min-width: $md4) {
+			margin-top: 55px;
+			padding: 0 40px;
+		}
 		@media (min-width: $md3) {
 			margin-top: 55px;
 			padding: 0 90px;
 		}
+
 		@media (min-width: $md1) {
 			margin-left: 50px;
 			margin-right: 50px;
@@ -281,6 +306,12 @@
 	}
 	// .benefits__image
 	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		transition: opacity 0.3s ease, filter 0.3s ease;
 	}
 	// .benefits__card
 	&__card {
@@ -289,6 +320,14 @@
 		color: #fff;
 		backdrop-filter: blur(10px);
 		padding: 38px 48px;
+		@media (any-hover: hover) {
+			&:hover {
+				.benefits__image {
+					opacity: 0;
+					filter: blur(10px);
+				}
+			}
+		}
 	}
 	// .benefits__card-title
 	&__card-title {
@@ -509,7 +548,10 @@
 	// .videos__slider
 	&__slider {
 		margin-top: 36px;
-		padding: 0 40px;
+		padding: 0 20px;
+		@media (min-width: $md4) {
+			padding: 0 40px;
+		}
 		@media (min-width: $md3) {
 			padding: 0 80px;
 		}
@@ -769,7 +811,7 @@
 			align-items: center;
 			width: 42px;
 			height: 42px;
-			@media (min-width: $md3) {
+			@media (min-width: $md2) {
 				width: 62px;
 				height: 62px;
 			}
@@ -777,7 +819,11 @@
 	}
 	// .examples__card-image
 	&__card-image {
-		@media (min-width: $md3) {
+		width: 100%;
+		@media (min-width: $md4) {
+			width: 150px;
+		}
+		@media (min-width: $md2) {
 			width: 200px;
 		}
 		@media (min-width: $md0) {

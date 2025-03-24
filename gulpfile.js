@@ -15,9 +15,9 @@ import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
-import { scss } from "./gulp/tasks/scss.js";
+import { scss, copyCssLibs } from "./gulp/tasks/scss.js";
 import { normalize } from "./gulp/tasks/scss.js";
-import { js } from "./gulp/tasks/js.js";
+import { js, copyJsLibs } from "./gulp/tasks/js.js";
 import { images, favicon } from "./gulp/tasks/images.js";
 import {
     otf2ttf,
@@ -45,7 +45,7 @@ const fonts = gulp.series(otf2ttf, ttfToWoff, copyWoff, fontsStyle);
 
 const mainTasks = gulp.series(
     fonts,
-    gulp.parallel(copy, html, normalize, scss, php, js, json, images, favicon)
+    gulp.parallel(copy, html, normalize, scss, copyCssLibs, php, js, copyJsLibs, json, images, favicon)
 );
 
 

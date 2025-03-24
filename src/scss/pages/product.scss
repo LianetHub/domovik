@@ -141,6 +141,11 @@
 
 .configuration {
 	padding: 48px 0;
+	.container-xl {
+		@media (max-width: $md2) {
+			padding: 0;
+		}
+	}
 	// .configuration__title
 	&__title {
 	}
@@ -148,6 +153,9 @@
 	&__body {
 		padding: 15px 0;
 		margin-top: 20px;
+		@media (max-width: $md2) {
+			border-radius: 0 !important;
+		}
 		@media (min-width: $md3) {
 			margin-top: 50px;
 			padding: 38px 0;
@@ -155,12 +163,23 @@
 	}
 	&__table {
 		overflow-x: auto;
+		&:not(.full) {
+			& table {
+				& tbody {
+					tr {
+						&:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5), :nth-child(6)) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
 		table {
 			font-weight: 500;
 			line-height: 115%;
 			letter-spacing: -0.54px;
 			color: #715235;
-			min-width: 992px;
+			min-width: 1200px;
 
 			@media (min-width: $md2) {
 				font-size: 18px;

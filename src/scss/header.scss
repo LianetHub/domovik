@@ -76,6 +76,9 @@
 			padding: 23px 36px;
 			display: none;
 		}
+		@media (max-width: $md5) {
+			gap: 8px;
+		}
 		@media (max-width: 375px) {
 			max-width: calc(100vw - 40px);
 		}
@@ -183,8 +186,16 @@
 		@media (min-width: $md1) {
 			gap: 13px;
 		}
+		@media (max-width: $md2) {
+			padding-left: 32px;
+		}
 		&::before {
 			font-size: 24px;
+			@media (max-width: $md3) {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
 			@media (min-width: $md2) {
 				font-size: 18px;
 			}
@@ -321,7 +332,6 @@
 	}
 	flex-direction: column;
 	gap: 16px;
-	padding: 20px;
 
 	@media (min-width: $md3) {
 		position: absolute;
@@ -354,12 +364,14 @@
 	}
 	// .submenu__link
 	&__link {
-		display: inline-flex;
 		align-items: center;
 		gap: 8px;
 		text-align: left;
-		white-space: nowrap;
 		transition: color 0.3s ease 0s;
+		display: inline-flex;
+		@media (min-width: $md3) {
+			white-space: nowrap;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
