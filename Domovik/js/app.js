@@ -49,6 +49,8 @@ $(function () {
 
         let $target = $(e.target);
 
+        console.log($target);
+
 
         // menu
         if ($target.hasClass('header__menu-toggler')) {
@@ -98,7 +100,11 @@ $(function () {
 
     });
 
-
+    $(document).on('click touchend', '.fancybox-slide', function (e) {
+        if ($(e.target).hasClass('fancybox-slide')) {
+            $.fancybox.close();
+        }
+    });
 
     // ideas block logic
 
